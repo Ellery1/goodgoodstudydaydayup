@@ -1,0 +1,62 @@
+/* 中文长文阅读优化 */
+
+/* 正文行高加大，中文阅读更舒适 */
+.markdown-preview-view {
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+}
+
+/* 段落间距 */
+.markdown-preview-view p {
+  margin-bottom: 1.2em;
+}
+
+/* 标题样式 */
+.markdown-preview-view h1 {
+  font-size: 1.6em;
+  border-bottom: 2px solid var(--background-modifier-border);
+  padding-bottom: 0.3em;
+  margin-top: 1.5em;
+}
+
+.markdown-preview-view h2 {
+  font-size: 1.3em;
+  margin-top: 1.8em;
+  color: var(--text-accent);
+}
+
+.markdown-preview-view h3 {
+  font-size: 1.15em;
+  margin-top: 1.5em;
+  font-style: italic;
+}
+
+/* 引用块样式 - 用于点睛句 */
+.markdown-preview-view blockquote {
+  border-left: 3px solid var(--text-accent);
+  padding: 0.8em 1.2em;
+  margin: 1em 0;
+  background: var(--background-secondary);
+  border-radius: 4px;
+}
+
+/* 加粗文字颜色 */
+.markdown-preview-view strong {
+  color: var(--text-accent);
+}
+
+/* 分割线 */
+.markdown-preview-view hr {
+  margin: 2em 0;
+  border-color: var(--background-modifier-border);
+}
+
+/* 列表项间距 */
+.markdown-preview-view li {
+  margin-bottom: 0.4em;
+}
+
+/* 最大阅读宽度 */
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+  max-width: 42em;
+}

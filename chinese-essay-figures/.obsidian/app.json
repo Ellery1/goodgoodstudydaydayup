@@ -1,0 +1,19 @@
+{
+  "theme": "obsidian",
+  "baseFontSize": 18,
+  "textFontFamily": "PingFang SC, Noto Serif SC, STSong, serif",
+  "monospaceFontFamily": "Menlo, Monaco, monospace",
+  "interfaceFontFamily": "PingFang SC, -apple-system, sans-serif",
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "showFrontmatter": false,
+  "foldHeading": true,
+  "foldIndent": true,
+  "defaultViewMode": "preview",
+  "livePreview": true,
+  "showLineNumber": false,
+  "spellcheck": false,
+  "vimMode": false,
+  "promptDelete": false,
+  "alwaysUpdateLinks": true
+}
