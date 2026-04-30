@@ -1,14 +1,14 @@
 /* 中文长文阅读优化 */
 
-/* 正文行高加大，中文阅读更舒适 */
+/* 正文行高加大，中文阅读更舒适（手机端友好） */
 .markdown-preview-view {
-  line-height: 1.9;
-  letter-spacing: 0.02em;
+  line-height: 2.2;
+  letter-spacing: 0.03em;
 }
 
 /* 段落间距 */
 .markdown-preview-view p {
-  margin-bottom: 1.2em;
+  margin-bottom: 1.5em;
 }
 
 /* 标题样式 */
