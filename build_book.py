@@ -60,7 +60,7 @@ FIGURE_META = {
     "陆游（1125-1210年）":         ("陆游",         "1125-1210年",    1125, ["爱国", "坚持", "悲愤"]),
     "辛弃疾（1140-1207）":         ("辛弃疾",       "1140-1207年",    1140, ["爱国", "豪放", "壮志未酬"]),
     "黄道婆（约1245-1330年）":     ("黄道婆",       "约1245-1330年",  1245, ["创新", "奉献", "平凡", "传承"]),
-    "文天祥（1236-1283）":         ("文天祥",       "1236-1283年",    1236, ["气节", "家国", "不屈"]),
+
 
     # ── 中国 · 元明 ──
     "于谦（1398-1457年）":         ("于谦",         "1398-1457年",    1398, ["忠诚", "担当", "清白"]),
@@ -168,6 +168,16 @@ def extract_popularity(md_text):
 def strip_popularity_section(md_text):
     """从 md 中移除 ### 热门指数 行。"""
     return re.sub(r'\n*###\s+热门指数[：:].*\n?', '\n', md_text)
+
+
+def strip_tags_line(md_text):
+    """从 md 中移除 "适配标签：..." 行（已在卡片头部显示）。"""
+    return re.sub(r'^-?\s*适配标签[：:].*\n?', '', md_text, flags=re.MULTILINE)
+
+
+def strip_core_material_heading(md_text):
+    """从 md 中移除 ### 核心素材 标题。"""
+    return re.sub(r'\n*###\s+核心素材\s*\n', '\n', md_text)
 
 
 def extract_tags(md_text):
@@ -291,6 +301,8 @@ def build_figures_content(all_figures_sorted):
 
         tags, popularity, md_text = parse_figure(filepath)
         md_text = strip_popularity_section(md_text)
+        md_text = strip_tags_line(md_text)
+        md_text = strip_core_material_heading(md_text)
         html = process_markdown(md_text, chapter_idx)
 
         # 构建标签徽章
@@ -311,7 +323,7 @@ def build_figures_content(all_figures_sorted):
         <section class="chapter-card figure-card" id="{card_id}" data-tags="{escape(','.join(tags))}">
             <div class="figure-card-header">
                 <div class="figure-name-row">
-                    <span class="figure-name">{escape(name)}</span>
+                    <span class="figure-name">{escape(name)}（{escape(display_dates)}）</span>
                     {f'<span class="figure-freq-label">热门指数：{escape(popularity)}</span>' if popularity else ''}
                 </div>
                 <div class="figure-tags">{tag_badges}</div>
