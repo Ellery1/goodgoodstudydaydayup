@@ -22,8 +22,8 @@ from datetime import datetime
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 FIGURES_DIR = os.path.join(PROJECT_DIR, "chinese-essay-figures", "figures")
 EXAMPLES_DIR = os.path.join(PROJECT_DIR, "chinese-essay-figures", "examples")
-OUTPUT_FILE = os.path.join(PROJECT_DIR, "中学作文人物素材库.html")
-BOOK_TITLE = "中学作文人物素材库"
+OUTPUT_FILE = os.path.join(PROJECT_DIR, "以人证道：从人物到真题的作文素材库.html")
+BOOK_TITLE = "以人证道：从人物到真题的作文素材库"
 
 # ============================================================
 # 人物元数据：姓名、显示日期、生年（负数=公元前）、标签
@@ -32,65 +32,65 @@ BOOK_TITLE = "中学作文人物素材库"
 
 FIGURE_META = {
     # ── 中国 · 春秋战国 ──
-    "伯牙与钟子期（春秋时期）":    ("伯牙与钟子期", "春秋时期",   -600, ["友谊", "孤独", "合作"]),
-    "陈不占（春秋时期）":          ("陈不占",       "春秋时期",   -550, ["勇气", "责任感", "智慧"]),
-    "齐国太史兄弟（春秋时期）":    ("齐国太史兄弟", "春秋时期",   -548, ["勇气", "气节", "责任感"]),
+    "伯牙与钟子期（春秋时期）":    ("伯牙与钟子期", "春秋时期",   -600, ["知音相惜"]),
+    "陈不占（春秋时期）":          ("陈不占",       "春秋时期",   -550, ["家国担当"]),
+    "齐国太史兄弟（春秋时期）":    ("齐国太史兄弟", "春秋时期",   -548, ["气节清白"]),
 
-    "墨子（约前468-前376年）":     ("墨子",         "约前468-前376年", -468, ["兼爱", "创新", "实践"]),
+    "墨子（约前468-前376年）":     ("墨子",         "约前468-前376年", -468, ["开拓创造", "家国担当"]),
 
     # ── 中国 · 两汉 ──
-    "司马迁（前145年-前86年）":    ("司马迁",       "前145年-前86年",  -145, ["坚持", "突破", "传承", "勇气"]),
-    "班超（32-102年）":            ("班超",         "32-102年",         32, ["开拓", "勇气", "投笔从戎"]),
+    "司马迁（前145年-前86年）":    ("司马迁",       "前145年-前86年",  -145, ["绝境重生", "文以载道"]),
+    "班超（32-102年）":            ("班超",         "32-102年",         32, ["少年突围"]),
 
     # ── 中国 · 魏晋南北朝 ──
-    "羊祜（221-278年）":           ("羊祜",         "221-278年",       221, ["胸怀", "气度"]),
-    "祖逖（266-321年）":           ("祖逖",         "266-321年",       266, ["勤奋", "坚持", "报国"]),
-    "顾荣（西晋时期）":            ("顾荣",         "西晋时期",        280, ["感恩", "平凡", "智慧"]),
-    "郦道元（约472-527年）":       ("郦道元",       "约472-527年",     472, ["探索", "实践", "严谨"]),
+    "羊祜（221-278年）":           ("羊祜",         "221-278年",       221, ["知音相惜"]),
+    "祖逖（266-321年）":           ("祖逖",         "266-321年",       266, ["少年突围", "家国担当"]),
+    "顾荣（西晋时期）":            ("顾荣",         "西晋时期",        280, ["知音相惜", "日常见深"]),
+    "郦道元（约472-527年）":       ("郦道元",       "约472-527年",     472, ["求真实证"]),
 
     # ── 中国 · 唐宋 ──
-    "玄奘（602-664年）":           ("玄奘",         "602-664年",       602, ["坚持", "探索", "信仰"]),
-    "颜真卿（709-784年）":         ("颜真卿",       "709-784年",       709, ["气节", "书法", "忠诚"]),
+    "玄奘（602-664年）":           ("玄奘",         "602-664年",       602, ["克己奉献", "时间耐力"]),
+    "颜真卿（709-784年）":         ("颜真卿",       "709-784年",       709, ["气节清白"]),
 
-    "范仲淹（989-1052年）":        ("范仲淹",       "989-1052年",      989, ["坚守", "责任感", "家国"]),
-    "狄青（1008-1057年）":         ("狄青",         "1008-1057年",    1008, ["奋斗", "突破", "出身"]),
+    "范仲淹（989-1052年）":        ("范仲淹",       "989-1052年",      989, ["家国担当"]),
+    "狄青（1008-1057年）":         ("狄青",         "1008-1057年",    1008, ["少年突围"]),
 
-    "沈括（1031-1095年）":         ("沈括",         "1031-1095年",    1031, ["博学", "实践", "科学"]),
-    "李清照（1084-约1155年）":     ("李清照",       "1084-约1155年",  1084, ["坚守", "孤独", "家国"]),
-    "陆游（1125-1210年）":         ("陆游",         "1125-1210年",    1125, ["爱国", "坚持", "悲愤"]),
-    "辛弃疾（1140-1207）":         ("辛弃疾",       "1140-1207年",    1140, ["爱国", "豪放", "壮志未酬"]),
-    "黄道婆（约1245-1330年）":     ("黄道婆",       "约1245-1330年",  1245, ["创新", "奉献", "平凡", "传承"]),
+    "沈括（1031-1095年）":         ("沈括",         "1031-1095年",    1031, ["求真实证"]),
+    "李清照（1084-约1155年）":     ("李清照",       "1084-约1155年",  1084, ["独行不改", "文以载道"]),
+    "陆游（1125-1210年）":         ("陆游",         "1125-1210年",    1125, ["家国担当"]),
+    "辛弃疾（1140-1207）":         ("辛弃疾",       "1140-1207年",    1140, ["家国担当"]),
+    "黄道婆（约1245-1330年）":     ("黄道婆",       "约1245-1330年",  1245, ["开拓创造", "克己奉献"]),
 
 
     # ── 中国 · 元明 ──
-    "于谦（1398-1457年）":         ("于谦",         "1398-1457年",    1398, ["忠诚", "担当", "清白"]),
-    "归有光（1507-1571年）":       ("归有光",       "1507-1571年",    1507, ["深情", "平淡", "细节"]),
-    "李时珍（1518-1593年）":       ("李时珍",       "1518-1593年",    1518, ["实践", "坚持", "创新"]),
-    "张岱（1597-1680）":           ("张岱",         "1597-1680年",    1597, ["回忆", "沧桑", "文化坚守"]),
-    "李定国（1621-1662年）":       ("李定国",       "1621-1662年",    1621, ["忠诚", "悲壮", "气节"]),
+    "于谦（1398-1457年）":         ("于谦",         "1398-1457年",    1398, ["气节清白", "家国担当"]),
+    "归有光（1507-1571年）":       ("归有光",       "1507-1571年",    1507, ["日常见深", "文以载道"]),
+    "李时珍（1518-1593年）":       ("李时珍",       "1518-1593年",    1518, ["求真实证", "时间耐力"]),
+    "张岱（1597-1680）":           ("张岱",         "1597-1680年",    1597, ["独行不改", "文以载道"]),
+    "李定国（1621-1662年）":       ("李定国",       "1621-1662年",    1621, ["气节清白", "家国担当"]),
 
     # ── 中国 · 清至近现代 ──
-    "蒲松龄（1640-1715年）":       ("蒲松龄",       "1640-1715年",    1640, ["坚持", "孤独", "寄托"]),
-    "郑板桥（1693-1766年）":       ("郑板桥",       "1693-1766年",    1693, ["清高", "为民", "艺术"]),
-    "袁枚（1716-1798年）":         ("袁枚",         "1716-1798年",    1716, ["随性", "真性情", "美食"]),
-    "左宗棠（1812-1885年）":       ("左宗棠",       "1812-1885年",    1812, ["担当", "实干", "收复新疆"]),
-    "谭嗣同（1865-1898）":         ("谭嗣同",       "1865-1898年",    1865, ["英雄", "责任感", "传承", "悲壮"]),
-    "鲁迅（1881-1936年）":         ("鲁迅",         "1881-1936年",    1881, ["悲悯", "清醒", "责任"]),
+    "蒲松龄（1640-1715年）":       ("蒲松龄",       "1640-1715年",    1640, ["独行不改", "时间耐力"]),
+    "郑板桥（1693-1766年）":       ("郑板桥",       "1693-1766年",    1693, ["独行不改", "日常见深"]),
+    "袁枚（1716-1798年）":         ("袁枚",         "1716-1798年",    1716, ["日常见深"]),
+    "左宗棠（1812-1885年）":       ("左宗棠",       "1812-1885年",    1812, ["家国担当", "时间耐力"]),
+    "谭嗣同（1865-1898）":         ("谭嗣同",       "1865-1898年",    1865, ["气节清白", "家国担当"]),
+    "鲁迅（1881-1936年）":         ("鲁迅",         "1881-1936年",    1881, ["文以载道", "家国担当"]),
 
     # ── 外国 · 古代至文艺复兴 ──
-    "达·芬奇（1452-1519年）":      ("达·芬奇",         "1452-1519年",  1452, ["创新", "探索", "智慧"]),
-    "维萨里（1514-1564年）":       ("维萨里",          "1514-1564年",  1514, ["创新", "勇气", "突破"]),
-    "塞万提斯（1547-1616年）":     ("塞万提斯",        "1547-1616年",  1547, ["失败", "坚持", "孤独", "智慧"]),
+    "达·芬奇（1452-1519年）":      ("达·芬奇",         "1452-1519年",  1452, ["开拓创造"]),
+    "维萨里（1514-1564年）":       ("维萨里",          "1514-1564年",  1514, ["求真实证"]),
+    "塞万提斯（1547-1616年）":     ("塞万提斯",        "1547-1616年",  1547, ["绝境重生", "时间耐力"]),
 
     # ── 外国 · 近现代 ──
-    "巴赫（1685-1750年）":         ("巴赫",            "1685-1750年",  1685, ["专注", "极致", "信仰"]),
-    "南丁格尔（1820-1910年）":     ("南丁格尔",        "1820-1910年",  1820, ["奉献", "创新", "仁爱"]),
-    "陀思妥耶夫斯基（1821-1881年）": ("陀思妥耶夫斯基", "1821-1881年",  1821, ["突破", "孤独", "智慧"]),
-    "尼古拉·特斯拉（1856-1943年）": ("尼古拉·特斯拉",  "1856-1943年",  1856, ["创新", "孤独", "奉献"]),
-    "契诃夫（1860-1904年）":       ("契诃夫",          "1860-1904年",  1860, ["悲悯", "克制", "日常中的深刻"]),
-    "泰戈尔（1861-1941年）":       ("泰戈尔",          "1861-1941年",    1861, ["诗意", "哲思", "文化桥梁"]),
-    "卡夫卡（1883-1924年）":       ("卡夫卡",          "1883-1924年",    1883, ["孤独", "坚持", "突破"]),
-    "罗莎琳德·富兰克林（1920-1958年）": ("罗莎琳德·富兰克林", "1920-1958年", 1920, ["创新", "孤独", "气节"]),
+    "巴赫（1685-1750年）":         ("巴赫",            "1685-1750年",  1685, ["文以载道", "时间耐力"]),
+    "南丁格尔（1820-1910年）":     ("南丁格尔",        "1820-1910年",  1820, ["克己奉献", "开拓创造"]),
+    "陀思妥耶夫斯基（1821-1881年）": ("陀思妥耶夫斯基", "1821-1881年",  1821, ["绝境重生", "文以载道"]),
+    "尼古拉·特斯拉（1856-1943年）": ("尼古拉·特斯拉",  "1856-1943年",  1856, ["开拓创造", "克己奉献"]),
+    "契诃夫（1860-1904年）":       ("契诃夫",          "1860-1904年",  1860, ["文以载道", "克己奉献"]),
+    "泰戈尔（1861-1941年）":       ("泰戈尔",          "1861-1941年",    1861, ["日常见深", "文以载道"]),
+    "卡夫卡（1883-1924年）":       ("卡夫卡",          "1883-1924年",    1883, ["独行不改", "文以载道"]),
+    "罗莎琳德·富兰克林（1920-1958年）": ("罗莎琳德·富兰克林", "1920-1958年", 1920, ["求真实证", "气节清白"]),
 }
 
 
@@ -361,13 +361,17 @@ def build_exams_content(exam_groups, start_chapter_idx):
 # 侧边栏目录
 # ============================================================
 
-def build_sidebar_toc(figures_sorted, exam_groups, tag_figure_map):
+def build_sidebar_toc(figures_sorted, exam_groups, tag_figure_map, fig_count):
     """构建侧边栏目录 HTML。"""
     toc_items = []
 
-    # ── 人物素材 ──
-    toc_items.append('<li class="toc-part">人物素材</li>')
+    # ── 前言 ──
+    toc_items.append(
+        '<li class="toc-chapter" data-anchor="preface">'
+        '<a href="#preface">前言</a></li>'
+    )
 
+    # ── 人物素材（按区域/时代分组）──
     current_region = None
     current_era = None
     fig_idx = 0
@@ -397,16 +401,31 @@ def build_sidebar_toc(figures_sorted, exam_groups, tag_figure_map):
 
     # ── 真题解析 ──
     toc_items.append('<li class="toc-part">真题解析</li>')
-    exam_idx = fig_idx
+    exam_idx = fig_count
 
     for group_title, exam_files in exam_groups:
         toc_items.append(
-            f'<li class="toc-era">{escape(group_title)}</li>'
+            f'<li class="toc-region">{escape(group_title)}</li>'
         )
+        # 按年份分组，点击年份跳转到该年第一道题
+        year_first_anchor = {}  # year → first exam anchor
         for filepath in exam_files:
             if not os.path.exists(filepath):
                 continue
+            # 从文件名中提取年份
+            import re as _re
+            year_match = _re.search(r'(\d{4})', os.path.basename(filepath))
+            year = year_match.group(1) if year_match else "未知"
+            if year not in year_first_anchor:
+                year_first_anchor[year] = f"exam-{exam_idx}"
             exam_idx += 1
+
+        for year in sorted(year_first_anchor.keys()):
+            anchor = year_first_anchor[year]
+            toc_items.append(
+                f'<li class="toc-chapter" data-anchor="{anchor}">'
+                f'<a href="#{anchor}">{year}年</a></li>'
+            )
 
     # 收集所有 anchor
     all_anchors = []
@@ -468,11 +487,46 @@ def generate_html():
     exams_html, total_count, exam_anchors = build_exams_content(exam_groups, fig_count)
     exam_count = total_count - fig_count
 
+    # ── 构建真题标题→锚点映射 ──
+    exam_title_to_anchor = {}
+    exam_idx = fig_count
+    for group_title, exam_files in exam_groups:
+        for filepath in exam_files:
+            if not os.path.exists(filepath):
+                continue
+            md_text = parse_exam(filepath)
+            title = extract_main_title(md_text)
+            if title:
+                exam_title_to_anchor[title] = f"exam-{exam_idx}"
+            exam_idx += 1
+
+    # ── 在人物HTML中将"适用真题"表格的真题名转为锚点链接 ──
+    for title, anchor in exam_title_to_anchor.items():
+        escaped_title = escape(title)
+        # 在表格单元格中，真题标题会被渲染为纯文本 <td>标题</td>
+        # 替换为带链接的版本
+        figures_html = figures_html.replace(
+            f'<td>{escaped_title}</td>',
+            f'<td><a href="#{anchor}" class="exam-link">{escaped_title}</a></td>'
+        )
+
     # ── 构建侧边栏 ──
-    toc_html, all_anchors = build_sidebar_toc(all_figures, exam_groups, tag_figure_map)
+    toc_html, all_anchors = build_sidebar_toc(all_figures, exam_groups, tag_figure_map, fig_count)
 
     # ── 合并正文 ──
+    # 从 README.md 读取前言内容
+    readme_path = os.path.join(PROJECT_DIR, "chinese-essay-figures", "README.md")
+    with open(readme_path, 'r', encoding='utf-8-sig') as f:
+        readme_md = f.read()
+    readme_html = process_markdown(readme_md, chapter_idx=9999)
+    preface_html = f'''
+    <section class="chapter-card" id="preface">
+        {readme_html}
+    </section>
+    '''
+
     content_html = f'''
+    {preface_html}
     {figures_html}
     {exams_html}
     '''
@@ -749,29 +803,29 @@ def generate_html():
         }}
 
         .toc-part {{
-            padding: 14px 20px 6px;
+            padding: 16px 20px 6px;
             font-size: 13px;
             font-weight: 700;
-            font-family: var(--font-heading);
-            color: var(--color-secondary);
-            letter-spacing: 1.5px;
+            font-family: var(--font-body);
+            color: var(--color-accent);
+            letter-spacing: 1px;
         }}
 
         .toc-region {{
-            padding: 8px 20px 4px 16px;
-            font-size: 14px;
+            padding: 10px 20px 4px 12px;
+            font-size: 13px;
             font-weight: 700;
-            font-family: var(--font-heading);
+            font-family: var(--font-body);
             color: var(--color-accent);
-            letter-spacing: 0.08em;
+            letter-spacing: 0.05em;
         }}
 
         .toc-era {{
-            padding: 4px 20px 6px 24px;
-            font-size: 13px;
-            font-family: var(--font-heading);
+            padding: 4px 20px 4px 20px;
+            font-size: 12px;
+            font-family: var(--font-body);
             color: var(--color-secondary);
-            letter-spacing: 0.05em;
+            letter-spacing: 0.03em;
         }}
 
         .toc-chapter {{
@@ -780,8 +834,8 @@ def generate_html():
 
         .toc-chapter > a {{
             display: block;
-            padding: 4px 20px 4px 32px;
-            font-size: 14px;
+            padding: 3px 20px 3px 28px;
+            font-size: 13px;
             color: var(--color-text);
             text-decoration: none;
             transition: all 0.15s ease;
@@ -1476,8 +1530,8 @@ def generate_html():
             <!-- 页脚 -->
             <footer class="page-footer">
                 <p><strong>{escape(BOOK_TITLE)}</strong></p>
-                <p>生成日期：{gen_date}</p>
-                <p>{fig_count} 位中外历史人物素材 + {exam_count} 道真题解析</p>
+                <p>作者：Ellery ｜ 版本：v1.0 ｜ 2026-08-29</p>
+                <p>{fig_count}位中外历史人物素材 + {exam_count} 道真题解析</p>
             </footer>
         </div>
 
